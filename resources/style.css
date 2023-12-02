@@ -336,3 +336,23 @@ a:hover {
     overflow: hidden;
     display: block;
   }
+
+  .compare-image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .compare-image-container .alt-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+  }
+  .b-dics__slider {
+    color: #1e4beb;
+  }
+  .b-dics__slider:after {
+    width: 2px;
+  }

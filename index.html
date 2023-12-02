@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="./resources/style.css" media="screen" />
+<link rel="stylesheet" href="resources/dics.original.css">
 
 <html lang="en">
 
@@ -19,9 +20,8 @@
             display: inline-block; /* Ensures text-align works */
         }
     </style> 
-    <script src="resources/img_slide.js"></script>
-    <script src="resources/video_comparison.js"></script>
-    
+    <script src="resources/js/video_comparison.js"></script>    
+    <script src="resources/js/dics.original.js"></script>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
         </div>
 
         <div class="venue">
-            ARXIV
+            ArXiv 
         </div>
 
         <br><br>
@@ -92,6 +92,25 @@
         </p>
         <br>
         <hr>
+        <h1>Paper</h1>
+            <div class="paper-thumbnail">
+                <a href="resources/CanonicalCapsulesNeurIPS2021.pdf">
+                    <img class="layered-paper-big" width="100%" src="./resources/paper.png" alt="Paper thumbnail"/>
+                </a>
+            </div>
+            <div class="paper-info">
+                <h3>PointNeRF++: A multi-scale, point-based Neural Radiance Field.</h3>
+                <p>Weiwei Sun, Eduard Trulls, Yang-Che Tseng, Sneha Sambandam, Gopal Sharma, Andrea Tagliasacchi, Kwang Moo Yi</p>
+                <p>arXiv.</p>
+                <pre><code>@InProceedings{sun2023pointnerfpp,
+                title = {PointNeRF++: A multi-scale, point-based Neural Radiance Field},
+                author = {Weiwei Sun, Eduard Trulls, Yang-Che Tseng, Sneha Sambandam, Gopal Sharma, Andrea Tagliasacchi, Kwang Moo Yi},
+                booktitle = {arXiv},
+                year = {2023}}
+                </code></pre>
+            </div>
+        <br>
+        <hr>
         <h1>Abstract</h1>
         <p style="width: 80%;text-align: justify;">
             Point clouds offer an attractive source of information to complement images in neural scene representations, 
@@ -105,91 +124,6 @@
         </p>
         <br>    
         <hr>
-        <br>
-        <h1>Nerf <i>vs</i> PointNeRF <i>vs</i> Ours</h1>
-        <p style="width: 80%; text-align: justify;">
-            We compare PointNeRF++(ours) with baselines including NeRF and PointNeRF. We show that our method achieve significantly better results than both baselines. 
-            Note that we can move <font color="blue"> slider left and right </font> to see the comparison.    
-        </p>
-        
-        <!-- pcd vs ours -->
-        <table class="tbl_video" style="font-size: 20px;text-align: center;">
-            <tr>
-                <td width="33.33%" colspan="1" style="font-size: 20px;text-align: right;">
-                   Input point cloud 
-                </td>
-                <td width="33.33%" colspan="1" style="font-size: 20px;text-align: center;">
-                    <span class="double-arrow left-arrow">&larr;</span>
-                    <span class="double-arrow right-arrow">&rarr;</span>
-                </td>
-                <td width="33.33%" colspan="1" style="font-size: 20px;text-align: left;">
-                   PointNeRF++ (Ours) 
-                </td>
-            </tr>
-        <table>        
-        <div class="parent-container">
-            <div class="img-comp-container">
-                <div class="img-comp-img">
-                  <img src="resources/teaser_details/detailed_files/our/0000000000.png" width="auto" height="200">
-                </div>
-                <div class="img-comp-img img-comp-overlay">
-                    <img src="resources/teaser_details/detailed_files/pcd/test_01_sample_8116_0.png" width="auto" height="200">
-                </div>
-            </div>
-        </div>
-        <!-- pointnerf vs ours -->
-        <table class="tbl_video" style="font-size: 20px;text-align: center;">
-            <tr>
-                <td width="33.33%" colspan="1" style="font-size: 20px;text-align: right;">
-                    PointNeRF 
-                </td>
-                <td width="33.33%" colspan="1" style="font-size: 20px;text-align: center;">
-                    <span class="double-arrow left-arrow">&larr;</span>
-                    <span class="double-arrow right-arrow">&rarr;</span>
-                </td>
-                <td width="33.33%" colspan="1" style="font-size: 20px;text-align: left;">
-                   PointNeRF++ (Ours) 
-                </td>
-            </tr>
-        <table>        
-        <div class="parent-container">
-            <div class="img-comp-container">
-                <div class="img-comp-img">
-                    <img src="resources/teaser_details/detailed_files/our/0000000000.png" width="auto" height="200">
-                </div>
-                <div class="img-comp-img img-comp-overlay">
-                    <img src="resources/teaser_details/detailed_files/pointnerf/0000000000.png" width="auto" height="200">
-                </div>
-            </div>
-        </div>
-
-        <!-- nerf vs ours -->
-        <table class="tbl_video" style="font-size: 20px;text-align: center;">
-            <tr>
-                <td width="33.33%" colspan="1" style="font-size: 20px;text-align: right;">
-                    NeRF 
-                </td>
-                <td width="33.33%" colspan="1" style="font-size: 20px;text-align: center;">
-                    <span class="double-arrow left-arrow">&larr;</span>
-                    <span class="double-arrow right-arrow">&rarr;</span>
-                </td>
-                <td width="33.33%" colspan="1" style="font-size: 20px;text-align: left;">
-                   PointNeRF++ (Ours) 
-                </td>
-            </tr>
-        <table>        
-        <div class="parent-container">
-            <div class="img-comp-container">
-                <div class="img-comp-img">
-                  <img src="resources/teaser_details/detailed_files/our/0000000000.png" width="auto" height="200">
-                </div>
-                <div class="img-comp-img img-comp-overlay">
-                    <img src="resources/teaser_details/detailed_files/nerf/0000000000.png" width="auto" height="200">
-                </div>
-            </div>
-        </div>
-        <!-- <img style="width: 80%;" src="resources/teaser.png" alt="Teaser figure." /> -->
-        <hr>
         <h1>Method</h1>
         <img style="width: 80%;" src="resources/overview.png" alt="Method Overview" />
         <br><br>
@@ -200,7 +134,23 @@
         and illustrated as the two overlaid scales in the middle ---naturally dealing with incomplete/sparse point clouds.
         The coarsest scale is a single, global voxel, equivalent to standard NeRF (i.e., not point-based).
         </p>
-        <br><br>
+        <br>
+        <hr>
+        <h1>Nerf <font color="red">vs</font> PointNeRF <font color="red">vs</font> PointNerf++(ours)</h1>
+        <p style="width: 80%; text-align: justify;">
+            We compare PointNeRF++(ours) with baselines including NeRF and PointNeRF. We show that our method achieve significantly better results than both baselines. 
+            Note that we can move <font color="blue"> slider left and right </font> to see the comparison.    
+        </p>
+        <div class="parent-video-compare-container">
+            <div class="b-dics", style="width: 100%; font-weight: 600;">
+                <img src="resources/teaser_details/detailed_files/pcd/test_01_sample_8116_0.png" alt="Input point cloud">
+                <img src="resources/teaser_details/detailed_files/pointnerf/0000000000.png" alt="PointNeRF">
+                <img src="resources/teaser_details/detailed_files/our/0000000000.png" alt="PointNeRF++ (Ours)">
+                <img src="resources/teaser_details/detailed_files/nerf/0000000000.png" alt="NeRF">
+            </div>
+        </div>
+        <br> 
+        <br> 
         <hr>
         <h1>More Rendering Results</h1>
        
@@ -359,7 +309,24 @@
                 <td width=12.5% style="font-size: 18px; vertical-align: top; "> Ground Truth </td>
             </tr>
         </table> 
+
+        <hr>
+        <h1>Acknowledgements</h1> 
+            <p style="width: 80%;text-align: justify;">
+            This work was supported in part by the Natural Sciences and Engineering Research Council of Canada (NSERC) Discovery Grant, NSERC Collaborative Research and Development Grant, Google, Digital Research Alliance of Canada, and Advanced Research Computing at the University of British Columbia.
+            <br><br>
+            This website is adapted from the template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a>. 
+            This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful project</a>, and inherits the modifications made by <a href="https://github.com/elliottwu/webpage-template">Shangzhe Wu</a> 
+            and  <a href="https://github.com/canonical-capsules/canonical-capsules.github.io">Canonical Capsules</a>.
+
+            Video comparison is adapted from <a href="https://jonbarron.info/zipnerf">ZipNeRF</a>. 
+            Image slider script is adapted from  <a href="https://github.com/abelcabezaroman/definitive-image-comparison-slider">Dics</a>. 
+            The code can be found <a href="https://github.com/pointnerfpp/pointnerfpp.github.io">here</a>.
+            </p>
+
+    <br><br>
     </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Get all video elements with the class 'myVideo'
@@ -369,13 +336,22 @@
             videos.forEach(function(video) {
                 video.playbackRate = 0.3; // Adjust the playback rate as needed
             });
+
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[0],
+                hideTexts: false,
+                textPosition: "bottom",
+                // linesColor: 'rgb(0,0,0)'
+            });
+            new Dics({
+                container: document.querySelectorAll('.b-dics')[1],
+                hideTexts: false,
+                textPosition: "bottom"
+            });
         });
-    </script>
-    <script>
         initComparisons();
     </script>
     <br><br><br>
-    <hr>
 
 </body>
 
