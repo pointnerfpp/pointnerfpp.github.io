@@ -288,7 +288,8 @@ a:hover {
   text-align: center;
 }
 .parent-video-compare-container {
-  width: 75%;
+  width: 80%;
+  justify-content: center;
 }
 .double-arrow {
     font-size: 24px;
