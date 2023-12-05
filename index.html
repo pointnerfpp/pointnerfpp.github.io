@@ -9,9 +9,16 @@
     </title>
     <meta property="og:title"
         content="PointNeRF++: A multi-scale, point-based Neural Radiance Field." />
-    <meta property="og:image" content="./resources/kitti360_quali_dense/output_stacked_all.mp4"/>
+    <!-- <meta property="og:image" content="./resources/kitti360_quali_dense/output_stacked_all_compressed.mp4"/> -->
+    <meta property="og:image" content="./resources/paper.png"/>
   	<meta property="og:description" content="
     A multi-scale, point-based neural radiance field that allows for leveraging point cloud regardless of it's low quality (e.g., LIDAR with large incomplete space)." />
+    <meta property="twitter:card"          content="summary" />
+    <meta property="twitter:title"         content="PointNeRF++: A multi-scale, point-based Neural Radiance Field" />
+    <meta property="twitter:description"   content="A multi-scale, point-based neural radiance field that allows for leveraging point cloud regardless of it's low quality (e.g., LIDAR with large incomplete space)." />
+    <meta property="twitter:image"         content="./resources/kitti360_quali_dense/output_stacked_all_compressed.mp4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             text-align: center;
@@ -94,7 +101,7 @@
         <br> 
         <br> 
         <p style="width: 80%;">
-            Note: Trained with sparsely sampled frames from KITTI-360 dataset and rendered with densely interpolated frames. 
+            Note: Trained with <font color="blue">sparsely </font> sampled frames from KITTI-360 dataset and rendered with <font color="blue">densely interpolated </font>frames. 
         </p>
         <br> 
         <hr>
@@ -127,6 +134,7 @@
             To deal with point cloud sparsity, we average across multiple scale levels---but only among those that are valid, i.e., 
             that have enough neighboring points in proximity to the ray of a pixel. To help model areas without points, we add a global voxel at the coarsest scale, 
             thus unifying ``classical'' and point-based NeRF formulations.
+            We validate our method on the NeRF Synthetic, ScanNet, and KITTI-360 datasets, outperforming the state of the art by a significant margin.
         </p>
         <br>    
         <hr>
